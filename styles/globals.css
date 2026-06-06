@@ -1,0 +1,11 @@
+html, body, #__next {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #ffffff;
+  color: #111827;
+}
+
+code {font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace}
