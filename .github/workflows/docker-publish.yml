@@ -58,10 +58,17 @@ jobs:
     # Only deploy from the default branch, not from tags or other branches.
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Compute lowercase image name
+        # Docker image references must be lowercase; the repo name has caps (HR).
+        env:
+          REGISTRY: ${{ env.REGISTRY }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+        run: echo "IMAGE=${REGISTRY}/${IMAGE_NAME,,}:latest" >> "$GITHUB_ENV"
+
       - name: Deploy over SSH
         uses: appleboy/ssh-action@v1
         env:
-          IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          IMAGE: ${{ env.IMAGE }}
           REGISTRY: ${{ env.REGISTRY }}
           GHCR_USER: ${{ github.actor }}
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
