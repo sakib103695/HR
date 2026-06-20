@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "senior-wordpress-developer",
+    "title": "Senior WordPress Developer",
+    "roleKey": "wordpress",
+    "hook": "Build plugins and themes people actually ship with.",
+    "employmentType": "Full-time",
+    "locationMode": "Remote",
+    "salaryRange": "Competitive (negotiable based on experience)",
+    "roleAnswerLabel": "Have you worked on any active plugins or themes before? Share links + a brief description of your contribution.",
+    "status": "open",
+    "descriptionMd": "We need a WordPress developer who lives in the code — not someone who drags widgets, but someone who writes clean PHP, ships custom plugins, and knows WordPress from `wp-config` to the REST API.\n\n## What you'll do\n- Build and maintain **custom plugins and themes** from scratch.\n- Work with Gutenberg blocks, custom post types, the REST API, and WooCommerce where needed.\n- Write maintainable, secure, performant code (and care about why an N+1 query is bad).\n- Ship real features and fix real bugs — fast.\n\n## What we're looking for\n- Strong PHP + WordPress internals (hooks, filters, the plugin/theme APIs).\n- Evidence of **shipped work**: plugins on WordPress.org, themes on ThemeForest under your name, or substantial plugin repos on GitHub. *We verify this.*\n- Comfort with custom development, not just page builders.\n\n## Nice to have\nPublished WordPress.org plugin/theme author profile, OOP/Composer/WP-CLI, React/Gutenberg, performance & security chops."
+  },
+  {
+    "slug": "ui-ux-designer",
+    "title": "UI/UX Designer",
+    "roleKey": "uiux",
+    "hook": "Design products that feel obvious to use.",
+    "employmentType": "Full-time / Project",
+    "locationMode": "Remote",
+    "salaryRange": "Competitive (negotiable based on experience)",
+    "roleAnswerLabel": "Share a project you're proud of — what problem did you solve and what was the outcome?",
+    "status": "open",
+    "descriptionMd": "We're looking for a designer who thinks in flows and systems, not just pretty screens — someone who can research, wireframe, prototype, and hand off pixel-clean work.\n\n## What you'll do\n- Design end-to-end flows: research → wireframe → prototype → polished UI.\n- Build and maintain a **design system** so the product stays consistent as it grows.\n- Partner with developers on practical, build-ready handoffs.\n- Use data and usability feedback to make screens measurably better.\n\n## What we're looking for\n- A portfolio that shows **thinking**, not just visuals (problem → decision → outcome).\n- Fluency in **Figma** (auto layout, components, prototyping).\n- A real sense for accessibility, hierarchy, and interaction.\n\n## Nice to have\nDesign-system experience, motion/interaction design, basic HTML/CSS literacy, user-research experience."
+  },
+  {
+    "slug": "social-media-manager",
+    "title": "Social Media Manager",
+    "roleKey": "smm",
+    "hook": "Own our voice. Make people stop scrolling.",
+    "employmentType": "Full-time / Project",
+    "locationMode": "Remote",
+    "salaryRange": "Competitive (negotiable based on experience)",
+    "roleAnswerLabel": "Share accounts or campaigns you've grown — with numbers if you have them.",
+    "status": "open",
+    "descriptionMd": "We want someone who understands platforms deeply, writes hooks that land, and grows a community on purpose — not by luck.\n\n## What you'll do\n- Own the content calendar across platforms (Instagram, TikTok, Facebook, LinkedIn).\n- Write scroll-stopping hooks and captions in a consistent brand voice.\n- Plan and run campaigns; manage community and engagement.\n- Track what works (engagement, reach, growth) and double down.\n\n## What we're looking for\n- A track record of **growing accounts** — with numbers you can show.\n- Strong short-form instincts (reels, trends, formats) and platform fluency.\n- Sharp writing and a feel for brand voice.\n\n## Nice to have\nPaid social experience, creator collaborations, Canva/light design, basic analytics."
+  },
+  {
+    "slug": "performance-marketer",
+    "title": "Performance Marketer",
+    "roleKey": "marketer",
+    "hook": "Spend a dollar, make two. Then prove it.",
+    "employmentType": "Full-time / Project",
+    "locationMode": "Remote",
+    "salaryRange": "Competitive (negotiable based on experience)",
+    "roleAnswerLabel": "Describe a campaign you ran and the results — include real numbers (CAC, ROAS, etc.) if you can.",
+    "status": "open",
+    "descriptionMd": "We need a marketer who thinks in funnels and unit economics — someone who can launch campaigns, read the numbers honestly, and find growth that compounds.\n\n## What you'll do\n- Plan and run paid acquisition across channels (Meta, Google, and beyond).\n- Own the funnel: audiences, creative, landing pages, conversion.\n- Watch the metrics that matter (CAC, ROAS, LTV) and run disciplined A/B tests.\n- Turn data into the next experiment.\n\n## What we're looking for\n- Demonstrated results with **real numbers** (case studies, dashboards).\n- Fluency with paid platforms and analytics/attribution.\n- An experiment mindset — hypothesis, test, learn, repeat.\n\n## Nice to have\nEmail/lifecycle marketing, landing-page optimization, SQL/Sheets modeling, CRM experience."
+  },
+  {
+    "slug": "seo-specialist",
+    "title": "SEO Specialist",
+    "roleKey": "seo",
+    "hook": "Win the long game in search.",
+    "employmentType": "Full-time / Project",
+    "locationMode": "Remote",
+    "salaryRange": "Competitive (negotiable based on experience)",
+    "roleAnswerLabel": "Share an SEO win with before/after numbers (rankings or traffic) and what you did.",
+    "status": "open",
+    "descriptionMd": "We want an SEO who goes beyond checklists — someone fluent in technical SEO, content strategy, and the kind of audits that actually move rankings.\n\n## What you'll do\n- Run technical + on-page audits and turn them into prioritized fixes.\n- Own keyword strategy, content briefs, and internal-linking structure.\n- Monitor Core Web Vitals, indexing, crawl health, and migrations.\n- Track rankings and traffic, and report on what's working.\n\n## What we're looking for\n- Real **technical SEO** depth (schema, canonicalization, crawl budget, Search Console, log analysis) — not just \"write meta descriptions.\"\n- Case studies with **before/after** ranking or traffic results.\n- Comfort with Ahrefs/SEMrush/Screaming Frog and Search Console.\n\n## Nice to have\nContent strategy, basic HTML/JS understanding, link-building experience, analytics fluency."
+  }
+]
