@@ -2,22 +2,9 @@
 // Run: npm run seed:demo
 // Demo docs are tagged { isDemo: true } and wiped/reinserted each run — real applications
 // (without that tag) are never touched.
-const fs = require('fs')
-const path = require('path')
 const crypto = require('crypto')
 const { MongoClient } = require('mongodb')
-
-function loadEnv() {
-  const p = path.join(__dirname, '..', '.env.local')
-  const env = {}
-  if (fs.existsSync(p)) {
-    for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
-      const m = line.match(/^([A-Z0-9_]+)=(.*)$/)
-      if (m) env[m[1]] = m[2].trim()
-    }
-  }
-  return { ...env, ...process.env }
-}
+const config = require('../lib/config')
 
 const ORDER = ['applied', 'screened', 'round_invited', 'round_submitted', 'interview', 'offer', 'hired']
 
@@ -201,9 +188,8 @@ function makeDoc(roleKey, row) {
 }
 
 async function main() {
-  const env = loadEnv()
-  const uri = env.MONGODB_URI
-  const dbName = env.MONGODB_DB_NAME || 'hr_instaquirk'
+  const uri = config.MONGODB_URI
+  const dbName = config.MONGODB_DB_NAME || 'hr_instaquirk'
   if (!uri) throw new Error('MONGODB_URI not set')
 
   const docs = []

@@ -1,23 +1,10 @@
 // Create or reset an admin account. Run: npm run create-admin
-//   - defaults to ADMIN_EMAIL / ADMIN_PASSWORD from .env.local
+//   - defaults to ADMIN_EMAIL / ADMIN_PASSWORD from lib/config.js
 //   - or pass on the CLI:  node scripts/create-admin.js you@email.com YourPassword
 // Self-contained CommonJS (no Next webpack).
-const fs = require('fs')
-const path = require('path')
 const crypto = require('crypto')
 const { MongoClient } = require('mongodb')
-
-function loadEnv() {
-  const p = path.join(__dirname, '..', '.env.local')
-  const env = {}
-  if (fs.existsSync(p)) {
-    for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
-      const m = line.match(/^([A-Z0-9_]+)=(.*)$/)
-      if (m) env[m[1]] = m[2].trim()
-    }
-  }
-  return { ...env, ...process.env }
-}
+const config = require('../lib/config')
 
 function hashPassword(password) {
   const salt = crypto.randomBytes(16).toString('hex')
@@ -26,17 +13,16 @@ function hashPassword(password) {
 }
 
 async function main() {
-  const env = loadEnv()
-  const email = (process.argv[2] || env.ADMIN_EMAIL || '').toLowerCase().trim()
-  const password = process.argv[3] || env.ADMIN_PASSWORD
+  const email = (process.argv[2] || config.ADMIN_EMAIL || '').toLowerCase().trim()
+  const password = process.argv[3] || config.ADMIN_PASSWORD
   if (!email || !password) {
-    console.error('Need an email and password. Set ADMIN_EMAIL/ADMIN_PASSWORD in .env.local, or:')
+    console.error('Need an email and password. Set ADMIN_EMAIL/ADMIN_PASSWORD in lib/config.js, or:')
     console.error('  node scripts/create-admin.js you@email.com YourPassword')
     process.exit(1)
   }
-  const uri = env.MONGODB_URI
-  const dbName = env.MONGODB_DB_NAME || 'hr_instaquirk'
-  if (!uri) throw new Error('MONGODB_URI not set')
+  const uri = config.MONGODB_URI
+  const dbName = config.MONGODB_DB_NAME || 'hr_instaquirk'
+  if (!uri) throw new Error('MONGODB_URI not set in lib/config.js')
 
   const client = new MongoClient(uri, { serverSelectionTimeoutMS: 10000 })
   await client.connect()
